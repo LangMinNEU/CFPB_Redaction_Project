@@ -1,0 +1,51 @@
+# Instruction for CFPB Redaction Work
+* Author:		Lang Min
+* Class: 		CS 6760
+* Date: 		9 December 2025
+
+
+### Step 0
+Download complaint data from CFPB.
+
+
+### Step 1
+* Code > 1_Load_Data_latest.ipynb
+
+To load and preprocess the raw data directly downloaded from CFPB database.
+
+Output: N/A (Simply raw data with fewer columns)
+
+
+### Step 2
+* Code > 2_PII_Detection_latest.ipynb
+
+To run processed data through Gemini API and record results.
+
+Output: See folder Result_All_Raw folder
+
+
+### Step 3
+* Code > 3_Resample_Results_latest.ipynb
+
+To get 100 samples out of each result file and label them as labeled data. Labeling are done manually.
+
+Output: See folder Result_Sample_Labeled
+
+
+### Step 4
+Put 40 labeled examples provided by Prof.Staddon, 400 labeled samples from results, and 20 made up "yes" data from "no"s together.
+
+Output: See folder Test_460
+
+
+### Step 5
+* Code > 4_Calculation.ipynb
+
+To get accuracy, precision, recall, and confusion matrix. Then use precision to calculate estimated correct number of positive cases in results.
+
+Output: See code file
+
+
+
+
+
